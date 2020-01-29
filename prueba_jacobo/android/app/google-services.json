@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "446407566952",
+    "firebase_url": "https://prueba-jacobo-ea123.firebaseio.com",
+    "project_id": "prueba-jacobo-ea123",
+    "storage_bucket": "prueba-jacobo-ea123.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446407566952:android:880e11a1d397b9a9db7ddd",
+        "android_client_info": {
+          "package_name": "com.aguilard.prueba_jacobo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446407566952-k085t9vvh8r2enqs5436utnh38e2trp2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXTWg3KZeKLFxSNBW8rhOc20vP_ON6Jy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446407566952-k085t9vvh8r2enqs5436utnh38e2trp2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
