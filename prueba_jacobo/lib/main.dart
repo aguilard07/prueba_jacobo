@@ -1,20 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:prueba_jacobo/views/sign_in.dart';
+import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+import 'package:prueba_jacobo/core/services/firebase_auth_service.dart';
+import 'package:prueba_jacobo/core/services/firestore_service.dart';
+import 'package:prueba_jacobo/ui/router.dart';
+import 'package:prueba_jacobo/ui/views/auth_widget.dart';
 
-void main() => runApp(MyApp());
+import 'core/auth_widget_builder.dart';
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-       // fontFamily: 'OpenSans'
+
+
+void main() {
+   WidgetsFlutterBinding.ensureInitialized();
+   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+   runApp(
+    MultiProvider(
+      providers: [
+        Provider<FirestoreService>.value(value: FirestoreService()),
+        ProxyProvider<FirestoreService, FirebaseAuthService>(
+          update: (context, firestoreService, firebaseAuthService) => FirebaseAuthService(firestoreService: firestoreService),
+        )
+      ], 
+      child: AuthWidgetBuilder(
+        builder: (context, userSnapshot){
+          return MaterialApp(
+            home: AuthWidget(userSnapshot: userSnapshot),
+            onGenerateRoute: Router.generateRoute,
+          );
+        },
       ),
-      home: SignIn()
-    );
-  }
+    )
+  );
 }
-
 

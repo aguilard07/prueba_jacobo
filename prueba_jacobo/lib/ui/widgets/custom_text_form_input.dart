@@ -1,20 +1,26 @@
-import 'package:flutter/material.dart';
+/*
+ * Text Input widget with the style required by the 
+ * UI design for the login and sign up forms. 
+ */
 
-import 'app_constants.dart';
+import 'package:flutter/material.dart';
+import 'package:prueba_jacobo/ui/shared/app_colors.dart';
 
 class CustomTextFormInput extends StatelessWidget {
-    
-  FormFieldValidator<String> validator;
+  final FormFieldValidator<String> validator;
+  final TextEditingController controller;
   final String hintText;
-  final bool obscureText;  
-  
-  CustomTextFormInput({this.hintText, this.obscureText, this.validator});
+  final bool obscureText;
+
+  CustomTextFormInput(
+      {this.hintText, this.obscureText, this.validator, this.controller});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      obscureText: obscureText,  
-      keyboardType: TextInputType.emailAddress,
+      controller: controller,
+      validator: validator,
+      obscureText: obscureText,
       style: TextStyle(
         fontSize: 22,
         color: black1,
