@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:prueba_jacobo/core/constants/app_constants.dart';
-import 'package:prueba_jacobo/core/models/model/user.dart';
-import 'package:prueba_jacobo/core/models/viewmodels/sign_up_model.dart';
+import 'package:prueba_jacobo/core/models/viewmodels/views/sign_up_model.dart';
 import 'package:prueba_jacobo/ui/shared/app_colors.dart';
 import 'package:prueba_jacobo/ui/shared/validators.dart';
 import 'package:prueba_jacobo/ui/views/base_widget.dart';

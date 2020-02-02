@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:prueba_jacobo/ui/shared/app_colors.dart';
 
-class TaskWidget extends StatelessWidget {
-  Color borderColor;
-  String text;
-  String date;
+class TaskTile extends StatelessWidget {
+  final int borderColor;
+  final String text;
+  final String date;
 
-  TaskWidget({this.borderColor, this.text, this.date});
+  TaskTile({this.borderColor, this.text, this.date});
 
   @override
   Widget build(BuildContext context) {
+
+
     return Container(
       width: double.infinity,
       height: 55,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.0),
         gradient: LinearGradient(
-            stops: [0.02, 0.02], colors: [borderBlue, Colors.white]),
+            stops: [0.02, 0.02], colors: [taskTypeColors[borderColor], Colors.white]),
         boxShadow: [
           BoxShadow(
             color: Colors.grey,
@@ -50,7 +52,7 @@ class TaskWidget extends StatelessWidget {
                       fontWeight: FontWeight.w700),
                   overflow: TextOverflow.ellipsis,
                 )),
-            SizedBox(
+            /*SizedBox(
               width: 25,
             ),
             IconButton(
@@ -62,7 +64,7 @@ class TaskWidget extends StatelessWidget {
               onPressed: () {
                 print('Boton presionado');
               },
-            )
+            )*/
           ],
         ),
       ),

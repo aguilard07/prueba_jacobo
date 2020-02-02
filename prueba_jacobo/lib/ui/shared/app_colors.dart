@@ -14,7 +14,7 @@ Color gradientBlue2 = Color(0xFF5F87E7);
 
 Color gradientPink1 = Color(0xFFF857C3);
 Color gradientPink2 = Color(0xFFE0139C);
-Color shadowPink    = Color(0xFFffa6f9);
+Color shadowPink = Color(0xFFffa6f9);
 
 Color borderYellow = Color(0xFFFFD506);
 Color borderGreen = Color(0xFF1ED102);
@@ -23,3 +23,20 @@ Color borderOrange = Color(0xFFF29130);
 Color borderPink = Color(0xFFD10263);
 
 Color taskTextBlue = Color(0xFF554E8F);
+
+//Map of task-type colors
+Map<int, Color> taskTypeColors = {
+  0: borderYellow,
+  1: borderGreen,
+  2: borderBlue,
+  3: borderOrange,
+  4: borderPink
+};
+
+Map<int,Color> panelBackgroundColors = {
+    0: Colors.yellow[300],
+    1: Colors.green,
+    2: Colors.blue,
+    3: Colors.orange[300],
+    4: Colors.pink[300]
+};
